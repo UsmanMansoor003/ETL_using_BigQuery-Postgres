@@ -1,4 +1,4 @@
-# Data Engineering task using Postgresql and Google Big Query 
+# Data Engineering using Postgresql and Google Big Query 
 This repository contains the two python files ETL_script_for_PostgresSQL.py and ETL_script_for_BigQuery.py. Additionally It also contain the sql files for postgresSql, BigQuery and Docx file that contain the result of queries which has been fetch from postgresSql.
 * Docker image File is used to containerized both the ETL scripts.
 * Elephantsql (https://www.elephantsql.com/) is used which provide PostgresSql database as a service.
@@ -35,7 +35,7 @@ engine = create_engine('YOUR database conneciton URL')
 
 * Open the command terminal 'cmd'
 * Move into the directory folder of the project where docker file is present
-* Build the docker image using command `docker build . -t sparknetworkchallenge`. The Docker file has been design in a way that it load the data to both the database when you are building the image.
+* Build the docker image using command `docker build . -t dataengineering`. The Docker file has been design in a way that it load the data to both the database when you are building the image.
 * However, if you want to manually load the data again just start the docker container and move to folder /opt/script.
 * once you are in the right folder run each individual file with the command `python3 ETL_script_for_PostgresSql.py` and `python3 ETL_script_for_BigQuery.py`
 * --------------- Happy Data Engineering -----------------
