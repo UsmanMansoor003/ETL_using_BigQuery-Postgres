@@ -1,9 +1,8 @@
-# Data Engineering task using Postgresql and Google Big Query 
+# Data Engineering using Postgresql and Google Big Query 
 This repository contains the two python files ETL_script_for_PostgresSQL.py and ETL_script_for_BigQuery.py. Additionally It also contain the sql files for postgresSql, BigQuery and Docx file that contain the result of queries which has been fetch from postgresSql.
 * Docker image File is used to containerized both the ETL scripts.
 * Elephantsql (https://www.elephantsql.com/) is used which provide PostgresSql database as a service.
 * Google BigQuery is also been used which provide fully managed enterprise data warehouse that helps to manage and analyze your data. 
-#### Reason of Using the two different databases and setup is just to showcase different skill sets i.e. tradional database, cloud technology, Big data analytics etc.
 
 ## Description of the scripts
 ### ETL_script_for_PostgresSql.py
@@ -32,11 +31,11 @@ This repository contains the two python files ETL_script_for_PostgresSQL.py and 
 ```python
 engine = create_engine('YOUR database conneciton URL')
 ```
-* For BigQuery Connection either use the key.json file which will be shared via Email or create your own service account with relevant roles and permission and generate key file. put that key file inside the folder 'Script' and rename it as key.json.
+* For BigQuery Connection either use the key.json file which you need to create your own service account with relevant roles and permission and generate key file. put that key file inside the folder 'Script' and rename it as key.json.
 
 * Open the command terminal 'cmd'
 * Move into the directory folder of the project where docker file is present
-* Build the docker image using command `docker build . -t sparknetworkchallenge`. The Docker file has been design in a way that it load the data to both the database when you are building the image.
+* Build the docker image using command `docker build . -t dataengineering`. The Docker file has been design in a way that it load the data to both the database when you are building the image.
 * However, if you want to manually load the data again just start the docker container and move to folder /opt/script.
 * once you are in the right folder run each individual file with the command `python3 ETL_script_for_PostgresSql.py` and `python3 ETL_script_for_BigQuery.py`
 * --------------- Happy Data Engineering -----------------
