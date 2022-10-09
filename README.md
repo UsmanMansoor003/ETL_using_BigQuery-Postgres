@@ -3,7 +3,6 @@ This repository contains the two python files ETL_script_for_PostgresSQL.py and 
 * Docker image File is used to containerized both the ETL scripts.
 * Elephantsql (https://www.elephantsql.com/) is used which provide PostgresSql database as a service.
 * Google BigQuery is also been used which provide fully managed enterprise data warehouse that helps to manage and analyze your data. 
-#### Reason of Using the two different databases and setup is just to showcase different skill sets i.e. tradional database, cloud technology, Big data analytics etc.
 
 ## Description of the scripts
 ### ETL_script_for_PostgresSql.py
@@ -32,7 +31,7 @@ This repository contains the two python files ETL_script_for_PostgresSQL.py and 
 ```python
 engine = create_engine('YOUR database conneciton URL')
 ```
-* For BigQuery Connection either use the key.json file which will be shared via Email or create your own service account with relevant roles and permission and generate key file. put that key file inside the folder 'Script' and rename it as key.json.
+* For BigQuery Connection either use the key.json file which you need to create your own service account with relevant roles and permission and generate key file. put that key file inside the folder 'Script' and rename it as key.json.
 
 * Open the command terminal 'cmd'
 * Move into the directory folder of the project where docker file is present
