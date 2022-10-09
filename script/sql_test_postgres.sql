@@ -1,0 +1,5 @@
+SELECT TO_DATE("message"."createdAt",'YYYY-MM-DD') as Date, COUNT(*) as Total_message FROM "public"."message"  GROUP BY 1 ORDER BY 1;
+SELECT "user"."id" as User FROM "public"."user" WHERE "user"."id" NOt IN (SELECT "message"."receiverId" FROM "public"."message");
+SELECT COUNT(*) as Total_active_subscription FROM "public"."subscription"  WHERE "subscription"."status" = 'Active';
+SELECT DISTINCT "message"."senderId" FROM "public"."message" WHERE "message"."senderId" NOT IN (SELECT DISTINCT "user"."id" FROM "public"."user" INNER JOIN "public"."subscription" ON "user"."id" = "subscription"."userid" AND "subscription"."status" = 'Active');
+SELECT TO_CHAR(TO_DATE("subscription"."createdAt",'YYYY-MM'),'YYYY-MM') as Date, AVG(CAST("subscription"."amount" AS FLOAT(2))) as subscription_amount FROM "public"."subscription" GROUP BY 1;
